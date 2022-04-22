@@ -21,7 +21,7 @@ def etl(inp:Optional[str]=None,out:Optional[str]=None,tr:Optional[int]=1):
         ans=transform1(p)
     elif tr==2:
         typer.echo("applying transormation part 2")
-        ans=str(transform2(p))
+        ans=transform2(p)
     else:
         typer.echo("apply correct transformation")
         return

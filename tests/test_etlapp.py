@@ -24,11 +24,11 @@ def test2_transform():
     assert transform.transform2(t)==dic
 
 def test_write():
-    dic = {"kumar":1,"shubham":1}
+    dic = {"shubham":1,"kumar":1}
     s="SHUBHAM KUMAR"
     with open("testout.txt") as file:
         for line in file:
-            assert (line==dic or line==s)
+            assert (line==str(dic) or line==s)
 
     
         
