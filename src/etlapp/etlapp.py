@@ -27,6 +27,8 @@ def etl(inp:Optional[str]=None,out:Optional[str]=None,tr:Optional[int]=1):
         typer.echo("apply correct transformation")
     if out:
         writes(out,ans)
+    else:
+        typer.echo("provide a filename to write to")
 
 
 def run() -> None:
