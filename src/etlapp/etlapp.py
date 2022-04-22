@@ -13,19 +13,20 @@ def etl(inp:Optional[str]=None,out:Optional[str]=None,tr:Optional[int]=1):
     if inp:
         typer.echo("reading files...")
         p=read(inp)
-        print(p)
     else:
-        typer.echo("no file name provided")
+        typer.echo("provide input file name")
         return
     if tr==1:
         typer.echo("applying transformation part 1")
         ans=transform1(p)
-    elif tr==1:
+    elif tr==2:
         typer.echo("applying transormation part 2")
         ans=str(transform2(p))
     else:
         typer.echo("apply correct transformation")
+        return
     if out:
+        typer.echo("writing to given output file")
         writes(out,ans)
     else:
         typer.echo("provide a filename to write to")
